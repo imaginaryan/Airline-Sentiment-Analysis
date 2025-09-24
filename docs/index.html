@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Sentiment Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Deep learning project analyzing US airline tweets; results, plots, report, and data links.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E✈%3C/text%3E%3C/svg%3E">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Airline Sentiment Analysis</h1>
+        <p class="subtitle">Deep learning classification of US airline tweets into positive, neutral, and negative</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://github.com/imaginaryan/Airline-Sentiment-Analysis" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="btn" href="#report">View Report</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="grid two-col">
+        <div>
+          <h2>Overview</h2>
+          <p>
+            This project explores customer sentiment in airline tweets using a neural network
+            built with TensorFlow/Keras. It includes preprocessing, modeling, evaluation, and
+            visualizations of performance metrics.
+          </p>
+          <ul class="key-points">
+            <li>Data sources: Tweets CSV and SQLite mirror</li>
+            <li>Targets: positive, neutral, negative</li>
+            <li>Outputs: accuracy/loss plots and an interactive HTML report</li>
+          </ul>
+        </div>
+        <div class="card info">
+          <h3>How to reproduce</h3>
+          <ol>
+            <li>Clone the repo and install deps: <code>pip install -r requirements.txt</code></li>
+            <li>Open <code>Sentiment Analysis.ipynb</code> and run all cells</li>
+            <li>Artifacts will include plots and <code>Sentiment Analysis.html</code></li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="plots">
+        <h2>Training Curves</h2>
+        <div class="grid two-col">
+          <figure class="card">
+            <img src="assets/Accuracy%20plot.jpg" alt="Accuracy plot" onerror="this.closest('figure').classList.add('missing')">
+            <figcaption>Accuracy over epochs</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="assets/Loss%20plot.jpg" alt="Loss plot" onerror="this.closest('figure').classList.add('missing')">
+            <figcaption>Loss over epochs</figcaption>
+          </figure>
+        </div>
+        <p class="note">If images are missing, copy your plot files into <code>docs/assets/</code> and commit.</p>
+      </section>
+
+      <section id="report">
+        <h2>Interactive Report</h2>
+        <div class="card">
+          <div class="report-frame">
+            <!-- Place a copy of the report at docs/Sentiment Analysis.html for this iframe to render -->
+            <iframe title="Sentiment Analysis Report" src="Sentiment%20Analysis.html"></iframe>
+          </div>
+          <p class="note">If the report does not load, copy <code>Sentiment Analysis.html</code> into <code>docs/</code> and commit.</p>
+        </div>
+      </section>
+
+      <section id="data" class="grid two-col">
+        <div class="card">
+          <h3>Data</h3>
+          <ul>
+            <li><a href="../Tweets.csv">Tweets.csv</a> (raw)</li>
+            <li><a href="../database.sqlite">database.sqlite</a> (mirror)</li>
+          </ul>
+          <p class="note">Links above work on GitHub; for Pages hosting, prefer placing downloadable copies in <code>docs/</code>.</p>
+        </div>
+        <div class="card">
+          <h3>Notebook</h3>
+          <p>Explore the end-to-end workflow in the Jupyter notebook.</p>
+          <a class="btn" href="https://github.com/imaginaryan/Airline-Sentiment-Analysis/blob/main/Sentiment%20Analysis.ipynb" target="_blank" rel="noopener">Open Notebook</a>
+        </div>
+      </section>
+
+      <section id="meta" class="card">
+        <h3>Project Links</h3>
+        <ul class="links">
+          <li><a href="https://github.com/imaginaryan/Airline-Sentiment-Analysis" target="_blank" rel="noopener">Repository</a></li>
+          <li><a href="https://github.com/imaginaryan/Airline-Sentiment-Analysis/blob/main/README.md" target="_blank" rel="noopener">README</a></li>
+          <li><a href="https://github.com/imaginaryan/Airline-Sentiment-Analysis/blob/main/Sentiment%20Analysis.html" target="_blank" rel="noopener">Report (GitHub view)</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Airline Sentiment Analysis · Built with ❤️</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+
